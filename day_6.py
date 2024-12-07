@@ -61,9 +61,7 @@ def part_two(file_path):
         grid_copy[row][col] = '#'
         return move_through_grid(grid_copy, start_pos, allow_loop_check=True)
 
-    empty_cells = [
-        (r, c) for r, row in enumerate(grid) for c, cell in enumerate(row) if cell == '.'
-    ]
+    empty_cells = move_through_grid(grid, start_pos) # Only need to check cells on original path
 
     loop_count = 0
     for r, c in tqdm(empty_cells, desc="Testing cells for loops"):
