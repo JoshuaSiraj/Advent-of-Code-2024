@@ -63,7 +63,6 @@ def part_two(file):
                 di, dj = point_2[0] - point_1[0], point_2[1] - point_1[1]
                 ni, nj = point_2
 
-
                 while True:
                     ni, nj = ni + di, nj + dj
                     if ni >= 0 and ni < rows and nj >= 0 and nj < cols:
