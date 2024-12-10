@@ -5,7 +5,6 @@ from tqdm import tqdm
 
 DIRECTIONS = [(-1, 0), (0, 1), (1, 0), (0, -1)] 
 
-
 def read_file(file_path):
     with open(file_path, "r") as file:
         return [list(line.strip()) for line in file]
